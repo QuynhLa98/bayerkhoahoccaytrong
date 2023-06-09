@@ -1,0 +1,32 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: 'Helvetica Neue', sans-serif;
+    color: #0D2A40;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.show {
+    display: inline-block!important;
+}
+
+.active-sub {
+    font-weight: 400;
+    color: #fff;
+}
+.showBlock {
+    display: block!important;
+}

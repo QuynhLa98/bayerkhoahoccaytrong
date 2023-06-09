@@ -1,0 +1,31 @@
+/* back to top */
+.backToTop{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    visibility: hidden;
+    opacity: 0;
+    i{
+        color: #fff;
+        background-color: #FF3162;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 35px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: -9px;
+            border-top: 35.5px solid transparent;
+            border-right: 10px solid #ff3162;
+        }
+    }
+}
+
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+}

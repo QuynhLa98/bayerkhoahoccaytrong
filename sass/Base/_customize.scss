@@ -1,0 +1,79 @@
+.pagination {
+  .active {
+    .page-link {
+      background-color: #ff3162;
+      border: 0px;
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+      padding: 12px 20px 12px 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -12px;
+        border-top: 69.5px solid transparent;
+        border-right: 12px solid #ff3162;
+      }
+    }
+  }
+  .page-item {
+    margin: 0 5px;
+    &:first-child .page-link {
+      border-radius: 0px;
+    }
+    &:last-child .page-link {
+        border-radius: 0px;
+    }
+  }
+  .page-link {
+    color: #0d3851;
+    border: 0px;
+    border-radius: 0px;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 12px 20px;   
+  }
+  @include responsive("medium") {
+    .page-link {
+      font-size: 15px;
+      font-weight: 400;
+      padding: 6px 10px;   
+    }
+    .active {
+      .page-link {
+        background-color: #ff3162;
+        border: 0px;
+        color: #fff;
+        font-weight: 700;
+        position: relative;
+        padding: 6px 10px 6px 4px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: -6px;
+          border-top: 35px solid transparent;
+          border-right: 7px solid #ff3162;
+        }
+      }
+    }
+  }
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+  width: 40px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.7;
+  margin: 0 10px;
+}
+.carousel-indicators button.active{
+  background-color: #10384F;
+  opacity: 1;
+}

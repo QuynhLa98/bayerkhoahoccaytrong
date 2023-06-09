@@ -1,0 +1,23 @@
+@import './Helpers/variables';
+@import './Helpers/mixin';
+
+// Base
+@import './Base/reset';
+@import './Base/customize';
+
+// Layouts
+@import './Layouts/header';
+@import './Layouts/footer';
+
+//Components
+@import './Components/breadcrumb';
+@import './Components/backToTop';
+// Pages
+@import './Pages/home';
+@import './Pages/detail';
+@import './Pages/list';
+
+//Responsive
+@import './Responsive/home';
+@import './Responsive/detail';
+@import './Responsive/list';

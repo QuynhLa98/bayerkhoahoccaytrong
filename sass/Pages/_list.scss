@@ -1,0 +1,32 @@
+.list_contain {
+    padding: 0 80px;
+    .list-item {
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .list-item-time {
+            width: fit-content;
+            background-color: #DE0043;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 10px 20px;
+            position: relative;
+            color: #FFF;
+            &::before{
+              content: "";
+              border-bottom: 37.5px solid transparent;
+              border-left: 12px solid #DE0043;
+              position: absolute;
+              top: 0px;
+              right: -12px;
+            }
+        }
+        .list-item-name { 
+            padding: 10px 30px;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+}

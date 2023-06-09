@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FONT  -->
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-9"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Bayer</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header-menu">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="/">
+            <img src="./img/logo.svg" alt="logo" id="logo" />
+            <img
+              src="./img/logo-white.svg"
+              alt="logo"
+              id="logo-white"
+              style="display: none"
+            />
+            <span> Vietnam </span> </a
+          >
+          <div class="d-flex">
+            <div class="search-btn d-block d-lg-none">
+              <button type="submit" onclick="openSearch()" id="search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i
+                  class="fa-solid fa-xmark"
+                  aria-hidden="true"
+                  style="display: none"
+                ></i>
+              </button>
+            </div>
+            <div class="d-flex align-items-center ms-3">
+              <button
+                class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+              </button>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/list.html">Bản tin nông gia</a>
+              </li>
+              <li
+                class="nav-item"
+                onclick="{openMenu()}"
+                style="display: flex; align-items: center"
+                id="submenu-btn"
+              >
+                <span class="nav-link"
+                  >Sản phẩm
+                  <i class="fa fa-angle-down" style="font-size: 10px"></i>
+                  <i
+                    class="fa fa-angle-up"
+                    style="display: none; font-size: 10px"
+                  ></i
+                ></span>
+              </li>
+            </ul>
+            <div class="search-btn d-none d-lg-block">
+              <button type="submit" onclick="openSearch()" id="search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i
+                  class="fa-solid fa-xmark"
+                  aria-hidden="true"
+                  style="display: none"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header_search" style="display: none" id="header_search">
+        <div class="container-md">
+          <div class="header_search-contain">
+            <form
+              class="search-form"
+              action=""
+              method="get"
+              accept-charset="utf-8"
+            >
+              <input
+                type="text"
+                name="keysearch"
+                placeholder="What are you looking for ?"
+                value=""
+              />
+              <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="sub-menu-contain">
+        <div class="container-md d-none d-lg-flex justify-content-end">
+          <div class="sub-menu-child">
+            <div id="sub1">
+              <ul>
+                <li>
+                  <a href="#"
+                    >Giống ngô lai F1 997C - năng suất đỉnh cao, trồng đâu trúng
+                    đó</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub2">
+              <ul>
+                <li><a href="#">NATIVO 750WG - Hơn cả mong đợi</a></li>
+                <li><a href="#">ANTRACOL 70WP</a></li>
+                <li><a href="#">ALIETTE 800WG</a></li>
+                <li><a href="#">VELUM 400SC - Khỏe rễ để thành công</a></li>
+                <li>
+                  <a href="#"
+                    >FOLICUR 250EW - Đánh bay chết chậm trên cây tiêu</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Thuốc trừ bệnh MELODY DOU 66.75WP - Đặc trị sương mai</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub3">
+              <ul>
+                <li><a href="#">ROUTINE START 280FS</a></li>
+                <li>
+                  <a href="#"
+                    >GAUCHO 600FS: Mập mầm, mướt mạ, bứt phá khởi đầu</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub4">
+              <ul>
+                <li>
+                  <a href="#"
+                    >BECANO 500SC: Thuốc trừ cỏ tiền nẩy mầm của Bayer</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub5">
+              <ul>
+                <li><a href="#">MOVENTO 150OD</a></li>
+                <li>
+                  <a href="#">CONFIDOR 100SL - Đặc trị côn trùng chích hút</a>
+                </li>
+              </ul>
+            </div>
+            <div id="sub6">
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <div id="sub7">
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub-menu-parent" id="sub-menu-parent">
+            <ul>
+              <li id="sub1P">Giống ngô lai Dekalb</li>
+              <li id="sub2P">Thuốc trừ bệnh</li>
+              <li id="sub3P">Thuốc xử lý giống</li>
+              <li id="sub4P">Thuốc trừ cỏ</li>
+              <li id="sub5P">Thuốc trừ sâu</li>
+              <li id="sub6P">Hạt giống lúa lai</li>
+              <li id="sub7P">Quy trình Much More</li>
+            </ul>
+          </div>
+          <div style="width: 150px"></div>
+          <div class="btn-close-sub-menu">
+            <button onclick="openMenu()">
+              CLOSE <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="container-md d-block d-lg-none">
+          <div class="sub-menu-parent sub-menu-parent-mobile pt-2" id="sub-menu-parent-mobile">
+            <ul>
+              <li id="sub1P">Giống ngô lai Dekalb <span>></span></li>
+              <li id="sub2P">Thuốc trừ bệnh <span>></span></li>
+              <li id="sub3P">Thuốc xử lý giống <span>></span></li>
+              <li id="sub4P">Thuốc trừ cỏ <span>></span></li>
+              <li id="sub5P">Thuốc trừ sâu <span>></span></li>
+              <li id="sub6P">Hạt giống lúa lai <span>></span></li>
+              <li id="sub7P">Quy trình Much More <span>></span></li>
+            </ul>
+          </div>
+          <div class="sub-menu-child sub-menu-child-mobile pt-4">
+            <div id="sub1M">
+              <ul>
+                <li>
+                  <a href="#"
+                    >Giống ngô lai F1 997C - năng suất đỉnh cao, trồng đâu trúng
+                    đó</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub2M">
+              <ul>
+                <li><a href="#">NATIVO 750WG - Hơn cả mong đợi</a></li>
+                <li><a href="#">ANTRACOL 70WP</a></li>
+                <li><a href="#">ALIETTE 800WG</a></li>
+                <li><a href="#">VELUM 400SC - Khỏe rễ để thành công</a></li>
+                <li>
+                  <a href="#"
+                    >FOLICUR 250EW - Đánh bay chết chậm trên cây tiêu</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Thuốc trừ bệnh MELODY DOU 66.75WP - Đặc trị sương mai</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub3M">
+              <ul>
+                <li><a href="#">ROUTINE START 280FS</a></li>
+                <li>
+                  <a href="#"
+                    >GAUCHO 600FS: Mập mầm, mướt mạ, bứt phá khởi đầu</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub4M">
+              <ul>
+                <li>
+                  <a href="#"
+                    >BECANO 500SC: Thuốc trừ cỏ tiền nẩy mầm của Bayer</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="sub5M">
+              <ul>
+                <li><a href="#">MOVENTO 150OD</a></li>
+                <li>
+                  <a href="#">CONFIDOR 100SL - Đặc trị côn trùng chích hút</a>
+                </li>
+              </ul>
+            </div>
+            <div id="sub6M">
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <div id="sub7M">
+              <ul>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="body_contain">
+      <!-- BREADCRUMB -->
+      <section class="container-md breadcrumb_custom">
+          <div>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/index">Trang chủ</a></li>
+                  <li class="breadcrumb-item" aria-current="page"><a href="#">Đồng hành cùng nông gia</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Nông nghiệp hiện đại</li>
+                </ol>
+              </nav>
+          </div>
+      </section>
+      <!-- BANNER -->
+      <section class="container-md detail_banner">
+        <div class="detail_banner-title">
+          <h2>NÔNG NGHIỆP HIỆN ĐẠI</h2>
+        </div>
+        <div>
+          <img src="./img/detail/banner.png" alt="banner">
+        </div>
+      </section>
+      <!-- CONTENT -->
+      <section class="container-md detail_content pt-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-2 detail_content-left">
+            <p>Bài viết gần đây</p>
+            <div class="detail_content-left-item">
+              <p>Đồng hành cùng nông gia</p>
+              <h4>Much More Coffee – Bội thu năng suất cây cà phê</h4>
+            </div>
+            <div class="detail_content-left-item">
+              <p>Đồng hành cùng nông gia</p>
+              <h4>Much More Coffee – Bội thu năng suất cây cà phê</h4>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-8 detail_content-center">
+            <h3>Nông nghiệp hiện đại là gì ?</h3>
+            <p>Nông nghiệp hiện đại là nền nông nghiệp áp dụng những khoa học công nghệ cao vào dây chuyền quản lý và sản xuất. Bao gồm: cơ giới quá trình sản xuất, tự động hóa, công nghệ thông tin, công nghệ sinh học,… để gia tăng năng suất cũng như lợi nhuận cho nông dân và doanh nghiệp.</p>
+            <div>
+              <img src="./img/detail/smart-agriculture-iot-with-hand-planting-tree-background 1.png" alt="">
+            </div>
+            <ul>
+              <p>
+                Đặc trưng của nền nông nghiệp hiện đại:
+              </p>
+              <li>Tốn nhiều tiền để đầu tư.</li>
+              <li>Quá trình sản xuất được quản lý chặt chẽ.</li>
+              <li>Ứng dụng nhiều khoa học công nghệ cao.</li>
+              <li>Áp dụng công nghệ sinh học, sản xuất các loại thuốc, phân bón không nguy hại đến môi trường.</li>
+              <li>Mở rộng ngành nông nghiệp, chú trọng khai thác ngoài đại dương.</li>
+              <li>Xuất hiện các xí nghiệp kiểu mới.</li>
+            </ul>
+  
+            <ul>
+              <p>
+                Nhiệm vụ của sản xuất nông nghiệp hiện đại
+              </p>
+              <li>Sản xuất các loại máy móc, thiết bị phục vụ cho nông nghiệp.</li>
+              <li>Nhân giống cây trồng và vật nuôi để đem lại kết quả tốt hơn.</li>
+              <li>Phòng trừ dịch bênh an toàn, hiệu quả.</li>
+              <li>Phát triển công nghệ chế biến và bảo quản.</li>
+              <li>Mở rộng các mô hình dịch vụ phục vụ cho nông nghiệp hiện đại.</li>
+              <li>Những yêu cầu tối thiểu của ngành nông nghiệp hiện đại</li>
+            </ul>
+  
+            <ul>
+              <p>
+                Theo PGS.TS Vũ Trọng Khải, ngành nông nghiệp hiện đại cần có những yêu cầu tối thiểu sau:  
+              </p>
+              <li>Phải là một nền nông nghiệp an toàn, cho người sản xuất lẫn ngườn tiêu dùng. Thị trường của nước ta có tới 100 triệu dân, là một thị trường rất lớn, rất tiềm năng. Vậy nên điều đầu tiên là phải cung cấp sản phẩm đạt chuẩn an toàn VietGAP ra thị trường.</li>
+              <li>Phải đảm bảo an ninh dinh dưởng. An ninh dinh dưởng không chỉ là cung cấp đủ mà còn đúng với nhu cầu dinh dưỡng của người dùng.</li>
+              <li>Bảo vệ môi trường sinh thái. Đây là vấn đề quan trọng không chỉ riêng về ngành nông nghiệp mà còn là tất cả các ngành nghề kinh tế khác nhau. Đây không chỉ là yêu cầu mà còn là nghĩa vụ của Việt Nam đối với thế giới</li>
+            </ul>
+            <span><i>Theo airnano.vn</i></span>
+          </div>
+          <div class="col-sm-12 col-md-2">
+            <div class="detail_content-right">
+                <p>Từ khóa nổi bật</p>
+                <ul>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> bayer</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> khoa học cây trồng</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> bayer</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> khoa học cây trồng</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> bayer</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> khoa học cây trồng</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> bayer</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> khoa học cây trồng</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> bayer</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i> khoa học cây trồng</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- NEWS -->
+      <section class="container-md news">
+        <div class="news_title">
+          <h2>BÀI VIẾT LIÊN QUAN</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+            <div class="news_item" id="news_item-1">
+              <div class="news_item-img">
+                <a href="#">
+                  <img src="./img/home/news1.png" alt="" />
+                </a>
+              </div>
+              <div class="news_item-time">12:22pm - 14/03/2023</div>
+              <div class="news_item-title">
+                <a href="#">
+                  Ra mắt Nhóm Công tác Hợp tác Công tư (PPP) ngành hàng lúa gạo
+                  Việt
+                </a>
+              </div>
+              <div class="news_item-readmore">
+                <a href="#"> / <i>XEM THÊM</i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="news_item" id="news_item-2">
+              <div class="news_item-img">
+                <a href="#">
+                  <img src="./img/home/news2.png" alt="" />
+                </a>
+              </div>
+              <div class="news_item-time">01:31pm - 06/03/2023</div>
+              <div class="news_item-title">
+                <a href="#"> Mừng tiết Xuân phân, cây lá đâm chồi, nẩy lộc!</a>
+              </div>
+              <div class="news_item-readmore">
+                <a href="#"> / <i>XEM THÊM</i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="news_item" id="news_item-3">
+              <div class="news_item-img">
+                <a href="#">
+                  <img src="./img/home/news3.png" alt="" />
+                </a>
+              </div>
+              <div class="news_item-time">01:31pm - 06/03/2023</div>
+              <div class="news_item-title">
+                <a href="#"> Các cặp đôi giúp vụ hè thu đạt năng suất tối hảo </a>
+              </div>
+              <div class="news_item-readmore">
+                <a href="#"> / <i>XEM THÊM</i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer_contain">
+          <div class="footer_top">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-lg-5">
+                  <div class="footer_top-item">
+                    <p class="footer_top-title">Liên hệ chúng tôi</p>
+                    <ul>
+                      <li>
+                        <i class="fa fa-phone" style="rotate: 180"></i> 1800 1775
+                      </li>
+                      <li>
+                        <i class="fa fa-map-marker-alt"></i> Tòa nhà CentrePoint,
+                        Lầu 3, 106 Nguyễn Văn Trỗi, phường 8, quận Phú Nhuận, TP.
+                        Hồ Chí Minh
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                  <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="footer_top-item">
+                        <p class="footer_top-title">Hỗ trợ nhà nông</p>
+                        <ul>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-angle-right"></i> Lịch phát sóng</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-angle-right"></i> Đồng hành cùng
+                              nông gia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                      <div class="footer_top-item">
+                        <p class="footer_top-title">Truy cập nhanh</p>
+                        <ul>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-angle-right"></i> Tin nhà nông</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fa fa-angle-right"></i> Thư viện</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bot">
+            <div class="container">
+              <p>Follow Us</p>
+              <div class="footer_bot-social">
+                <a href="https://www.facebook.com/Bayer4CropsVN" target="_blank">
+                  <div class="footer_bot-social-item">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                </a>
+                <a href="https://www.youtube.com/@bayercropscienceviet" target="_blank"
+                  ><div class="footer_bot-social-item">
+                    <i class="fab fa-youtube"></i></div
+                ></a>
+              </div>
+              <div class="copyright">
+                <p>Copyright © Bayer AG</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+     <!-- back to top -->
+     <a href="#" class="backToTop cd-top text-replace js-cd-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/main-backToTop.js"></script>
+
+    <!-- JS Bootrap 5.3 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

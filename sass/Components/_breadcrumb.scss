@@ -1,0 +1,22 @@
+.breadcrumb_custom {
+    border-top: 0.5px solid #616161;
+    padding: 20px 100px;
+    .breadcrumb {
+      li {
+        font-size: 12px;
+        font-weight: 300;
+        a {
+          color: #10384f;
+          text-decoration: none;
+        }
+        &.active {
+          color: #10384f;
+          font-weight: 400;
+        }
+      }
+    }
+    @include responsive("medium") {
+      padding: 20px 0px;
+    }
+  }
+  
